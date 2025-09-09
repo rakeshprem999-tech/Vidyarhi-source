@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vidhyarthi - Tech & Job News for Students</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="pages/main.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header class="bg-black py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold text-white" id="site-title">Vidhyarthi</h1>
+      <nav class="flex space-x-6 flex-wrap">
+        <a href="#home" class="nav-link text-white" onclick="scrollToSection('home')">Home</a>
+        <a href="#tech-news" class="nav-link text-white" onclick="scrollToSection('tech-news')">Tech News</a>
+        <a href="#job-news" class="nav-link text-white" onclick="scrollToSection('job-news')">Job News</a>
+        <a href="#notifications" class="nav-link text-white" onclick="scrollToSection('notifications')">Notifications</a>
+        <a href="#resources" class="nav-link text-white" onclick="scrollToSection('resources')">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section text-center py-16 bg-white text-black">
+    <div class="container mx-auto px-4">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb64995b-8db8-437a-a49c-7f02398ebdf7.png"
+        alt="Modern student in a vibrant university library" class="mx-auto mb-8 rounded-lg shadow-2xl" />
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f7c689d1-4413-4442-bfd5-a059855cd10a.png"
+        alt="Monochrome student studying algorithms" class="mx-auto mb-8 rounded-lg shadow-2xl" />
+      <h2 class="text-4xl font-bold mb-4">Empowering Students with Tech & Career Insights</h2>
+      <p class="text-lg mb-8">
+        Stay updated on the latest tech innovations, job opportunities, and campus notifications tailored for students.
+      </p>
+      <button onclick="getStarted()" class="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition">
+        Get Started
+      </button>
+      <button onclick="loadHomeData()" class="ml-4 bg-gray-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">
+        Load Home Updates
+      </button>
+    </div>
+  </section>
+
+  <!-- Tech News Section -->
+  <section id="tech-news" class="py-16 bg-black text-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-8">Latest Tech News for Students</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="news-card bg-white text-black p-6 rounded-lg shadow-md">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b502a42-f3fe-4756-b15b-92afec2e86ba.png"
+            alt="AI robot in classroom" class="w-full h-32 object-cover rounded mb-4" />
+          <h4 class="text-xl font-semibold mb-2">AI in Education: Transforming Learning</h4>
+          <p>Discover how artificial intelligence is revolutionizing classrooms and boosting student performance.</p>
+          <button onclick="readMore(1)" class="mt-4 text-gray-600 underline">Read More</button>
+          <button onclick="likeArticle(1)" class="ml-4 mt-4 text-green-600 underline">Like</button>
+        </div>
+        <div class="news-card bg-white text-black p-6 rounded-lg shadow-md">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb69f56b-925f-432a-a96c-a6229686fe11.png"
+            alt="Students collaborating app dev" class="w-full h-32 object-cover rounded mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Mobile App Dev Trends</h4>
+          <p>Stay ahead with the newest trends in mobile application development for aspiring developers.</p>
+          <button onclick="readMore(2)" class="mt-4 text-gray-600 underline">Read More</button>
+          <button onclick="likeArticle(2)" class="ml-4 mt-4 text-green-600 underline">Like</button>
+        </div>
+        <div class="news-card bg-white text-black p-6 rounded-lg shadow-md">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d9c6dba-716c-436a-ab69-5abc751eb9d8.png"
+            alt="Cybersecurity expert lecture" class="w-full h-32 object-cover rounded mb-4" />
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/00860565-d36a-4d42-86bc-ec85a88fd702.png"
+            alt="Network security schematic" class="w-full h-24 object-cover rounded mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Cybersecurity Essentials</h4>
+          <p>Learn the fundamentals of protecting your digital life as a tech-savvy student.</p>
+          <button onclick="readMore(3)" class="mt-4 text-gray-600 underline">Read More</button>
+          <button onclick="likeArticle(3)" class="ml-4 mt-4 text-green-600 underline">Like</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job News Section -->
+  <section id="job-news" class="py-16 bg-white text-black">
+    <div class="container mx-auto px-4">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/484d537f-d640-4087-baaf-e5e32b081957.png"
+        alt="Job fair" class="w-full h-40 object-cover rounded mb-8" />
+      <h3 class="text-3xl font-bold text-center mb-8">Job Opportunities</h3>
+      <div class="bg-black text-white p-8 rounded-lg shadow-lg">
+        <ul class="space-y-4">
+          <li class="flex items-center">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0a2168d7-bf4b-4da3-88f3-d9e492e8f519.png"
+              alt="Software engineer icon" class="mr-4 rounded" />
+            <div>
+              <h4 class="text-lg font-semibold">Junior Software Developer at TechCorp</h4>
+              <p>Apply for entry-level positions in innovative startups. Submit resumes by end of week.</p>
+              <button onclick="applyNow(1)" class="mt-2 bg-white text-black px-4 py-2 rounded font-semibold">Apply Now</button>
+            </div>
+          </li>
+          <li class="flex items-center">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7e2f074-0236-40a6-bbe7-99cc56b4cec7.png"
+              alt="Data analyst icon" class="mr-4 rounded" />
+            <div>
+              <h4 class="text-lg font-semibold">Internship in Data Analysis</h4>
+              <p>Gain hands-on experience in data analytics with top companies.</p>
+              <button onclick="applyNow(2)" class="mt-2 bg-white text-black px-4 py-2 rounded font-semibold">Apply Now</button>
+            </div>
+          </li>
+          <li class="flex items-center">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7bc728cf-4aaa-44e0-b487-f2370587e57f.png"
+              alt="UX designer icon" class="mr-4 rounded" />
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b26a7c64-f665-4be7-add4-b4c1832b277c.png"
+              alt="Designer blueprint icon" class="mr-4 rounded" />
+            <div>
+              <h4 class="text-lg font-semibold">UX/UI Design Roles</h4>
+              <p>Creative opportunities for students passionate about user experience design.</p>
+              <button onclick="applyNow(3)" class="mt-2 bg-white text-black px-4 py-2 rounded font-semibold">Apply Now</button>
+            </div>
+          </li>
+        </ul>
+        <button onclick="refreshJobs()" class="mt-4 bg-gray-600 text-white px-6 py-3 rounded font-semibold">Refresh Job Listings</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notifications Section -->
+  <section id="notifications" class="py-16 bg-black text-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-8">Notifications</h3>
+      <div class="bg-white text-black p-8 rounded-lg shadow-lg">
+        <div id="notification-list" class="space-y-4">
+          <div class="notification-item bg-gray-200 text-black p-4 rounded" id="notif-1">
+            <strong>Campus Event:</strong> Tech Seminar on AI Ethics - November 15th.
+            <button onclick="markAsRead(1)" class="ml-4 text-blue-600 underline">Mark as Read</button>
+          </div>
+          <div class="notification-item bg-gray-200 text-black p-4 rounded" id="notif-2">
+            <strong>Job Alert:</strong> New internship openings at Innovate Labs.
+            <button onclick="markAsRead(2)" class="ml-4 text-blue-600 underline">Mark as Read</button>
+          </div>
+          <div class="notification-item bg-gray-200 text-black p-4 rounded" id="notif-3">
+            <strong>Reminder:</strong> Submit final projects by December 1st.
+            <button onclick="markAsRead(3)" class="ml-4 text-blue-600 underline">Mark as Read</button>
+          </div>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6aaf4fa0-a0c8-41e2-99ec-5aca0ff1fdd8.png"
+            alt="Bulletin board" class="mx-auto mt-8 rounded" />
+        </div>
+        <button onclick="loadNotifications()" class="mt-4 bg-black text-white px-6 py-3 rounded font-semibold">Load More Notifications</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="py-16 bg-white text-black">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-8">Student Resources</h3>
+      <p class="text-lg mb-8">Access tutorials, guides, and tools to enhance your learning journey.</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+        <button onclick="accessResource('tutorials')" class="bg-black text-white p-4 rounded-lg font-semibold hover:bg-gray-800 transition">Tutorials</button>
+        <button onclick="accessResource('guides')" class="bg-black text-white p-4 rounded-lg font-semibold hover:bg-gray-800 transition">Guides</button>
+        <button onclick="accessResource('tools')" class="bg-black text-white p-4 rounded-lg font-semibold hover:bg-gray-800 transition">Tools</button>
+        <button onclick="accessResource('videos')" class="bg-black text-white p-4 rounded-lg font-semibold hover:bg-gray-800 transition">Videos</button>
+      </div>
+      <button onclick="openResources()" class="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition">
+        Explore All Resources
+      </button>
+      <button onclick="searchResources()" class="ml-4 bg-gray-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition">
+        Search Resources
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-4 text-center text-white">
+    <p>&copy; 2023 Vidhyarthi. All rights reserved.</p>
+    <button onclick="contactUs()" class="mt-2 bg-white text-black px-4 py-2 rounded font-semibold">Contact Us</button>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" style="cursor: pointer; float: right;">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
