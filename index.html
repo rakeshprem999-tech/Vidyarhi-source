@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vidhyarthi - Tech Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="login-container" role="main" aria-label="Login form for Vidhyarthi tech platform">
+    <div class="logo" aria-label="Vidhyarthi logo">VIDHYARTHI</div>
+    <div class="subtitle">Tech & Innovation Hub</div>
+    <div class="welcome-msg">Welcome back! Let's innovate together.</div>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="form-input"
+          placeholder="Enter your username"
+          autocomplete="username"
+          required
+          aria-required="true"
+          aria-describedby="usernameHelp"
+        />
+        <small id="usernameHelp" class="form-help">Your unique Vidhyarthi ID</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-input"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+          aria-required="true"
+          aria-describedby="passwordHelp"
+        />
+        <small id="passwordHelp" class="form-help">Keep it secret, keep it safe</small>
+      </div>
+      <button type="submit" class="login-btn" aria-label="Login to Vidhyarthi platform">Login</button>
+    </form>
+    <div class="links" aria-label="Additional login options">
+      <a href="#" tabindex="0">Forgot Password?</a> | <a href="#" tabindex="0">Sign Up</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

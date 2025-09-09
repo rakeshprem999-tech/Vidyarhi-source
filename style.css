@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.login-container {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(25px);
+  border: 1px solid #444;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.login-container:hover {
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.15),
+    0 0 50px rgba(255, 255, 255, 0.25);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.15em;
+  user-select: text;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  user-select: text;
+}
+
+.welcome-msg {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 2rem;
+  font-style: italic;
+  user-select: text;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ccc;
+  user-select: text;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #eee;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: inset 0 0 5px #111;
+  user-select: text;
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+.form-input:focus {
+  outline: none;
+  background: #111;
+  box-shadow:
+    0 0 8px 2px #00ffff,
+    inset 0 0 8px #00ffff;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.login-btn:hover {
+  background: #00e5e5;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 10px rgba(0, 255, 255, 0.3);
+}
+
+.links {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  user-select: text;
+}
+
+.links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #00e5e5;
+  text-decoration: underline;
+}
+
+/* Subtle floating animation for the container */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
